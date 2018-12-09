@@ -10,7 +10,7 @@
 # UPDATE_TRANSLATIONS  update transation files
 # PLCrashReporter   use PLCrashReporter for mac, need PLCrashReporter framework
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
 project(WizNotePlus VERSION 2.7.2)
 
@@ -34,7 +34,7 @@ else(APPLE)
     set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
     # $ORIGING代表程序目录，CMAKE_INSTALL_RPATH是分号分隔的list，它指定了在安装目标时使用的rpath
     set(CMAKE_INSTALL_RPATH "$ORIGIN;$ORIGIN/..;$ORIGIN/../lib")
-    set (openssl-linked on)
+    set(openssl-linked on)
 endif(APPLE)
 
 #============================================================================
